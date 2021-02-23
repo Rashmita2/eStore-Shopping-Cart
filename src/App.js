@@ -13,7 +13,7 @@ function App() {
       <Header title="eStore"/>
       <div className="app-main">
             < CartItems items={cartItems}/>
-            < CartTotal />
+            < CartTotal items={cartItems}/>
       </div>
     </div>
   );
