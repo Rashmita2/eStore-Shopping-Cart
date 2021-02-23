@@ -1,8 +1,7 @@
 import React from 'react'
-import key from './items/keyboard.jpg'
 import './ItemDescription.css'
 
-const ItemDescription = ({ index, item, changeItemQuantity }) => {
+const ItemDescription = ({ index, item, changeItemQuantity, deleteItem }) => {
     return (
         <div className="ItemDescription">
                 <div className="CartItem-image">
@@ -31,7 +30,7 @@ const ItemDescription = ({ index, item, changeItemQuantity }) => {
                                     </select>
                                 </div>
                                 <div className="item-actions-divider">|</div>
-                                <div className="item-delete">
+                                <div className="item-delete" onClick={deleteItem.bind(this, index)}>
                                     Delete
                                 </div>
                         </div>
