@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Header title="eStore"/>
       <div className="app-main">
-            < CartItems items={cartItems}/>
+            < CartItems items={cartItems} setCartItems={setCartItems}/>
             < CartTotal items={cartItems}/>
       </div>
     </div>

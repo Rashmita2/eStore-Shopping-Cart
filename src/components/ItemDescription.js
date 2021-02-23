@@ -2,7 +2,7 @@ import React from 'react'
 import key from './items/keyboard.jpg'
 import './ItemDescription.css'
 
-const ItemDescription = ({ item }) => {
+const ItemDescription = ({ index, item, changeItemQuantity }) => {
     return (
         <div className="ItemDescription">
                 <div className="CartItem-image">
@@ -20,7 +20,9 @@ const ItemDescription = ({ item }) => {
 
                         <div className="item-actions">
                                 <div className="item-quantity">
-                                    <select value={item.quantity}>
+                                    <select 
+                                    onChange= {(e) => changeItemQuantity(e, index)}
+                                    value={item.quantity}>
                                         <option value="1">Qty:1</option>
                                         <option value="2">Qty:2</option>
                                         <option value="3">Qty:3</option>
